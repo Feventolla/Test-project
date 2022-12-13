@@ -1,49 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.App{
-  color: black;
-} */
-
-.app {
+ .header {
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -59,11 +14,11 @@
 .cardAll {
   color: black;
 }
-.app-inside{
+.inside{
   display: flex;
   flex-direction: column;
 
-}
+}/*
 .nav-add{
   position: fixed;
   top: 3em;
@@ -79,10 +34,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  /* height: 430px */
+   height: 430px 
 
 
-  /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
+  
 }
 
 @media screen and (min-width: 600px) {
@@ -108,7 +63,7 @@ input {
   border: none;
   border-radius: 10px;
   background-color: rgba(224, 227, 245, 0.659);
-}
+} */
 
 /* button {
   border: none;
@@ -119,9 +74,63 @@ input {
   color: #bfa2f0;
 } */
 
-.link-btn {
+/* .link-btn {
   background: none;
   color: rgb(122, 122, 242);
   text-decoration: none; 
-}  
+}   */
+/*
+.app {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.button-close {
+  border: none;
+  background-image: linear-gradient(79deg, #03062d, #050e2c 48%, #060a30);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #bfa2f0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
 

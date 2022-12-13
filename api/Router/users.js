@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const User = require("../model/user");
+const cors = require("cors");
 
 //get all users
 router.get("/api/users", async (req, res) => {
@@ -35,7 +36,7 @@ router.post("/api/users", async (req, res) => {
       user,
     });
   } catch (error) {
-    console.log(error.message);
+    console.log("error create", error.message);
   }
 });
 
@@ -58,7 +59,7 @@ router.put("/api/users/:id", getuser, async (req, res) => {
   try {
     const updateUser = await res.user.save();
     res.json(updateUser);
-    // res.json(message: "user updated");
+    res.json({ message: "user updated" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -72,6 +73,10 @@ router.delete("/api/users/:id", getuser, async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+});
+
+router.get("/api/users/:id", getuser, (req, res) => {
+  res.json(res.user);
 });
 
 //middleware

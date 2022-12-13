@@ -1,85 +1,38 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.App{
-  color: black;
-} */
-
-.app {
+.App {
   text-align: center;
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  color: black;
-  background-color: white;
+  color: white;
+  /* background-color: black; */
+  /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
+
   
+  /* filter: blur(1px); */
 }
- h2 {
+h2 {
   margin-left: 3em;
 }
-.cardAll {
-  color: black;
-}
-.app-inside{
+.app-inside , .login-form{
   display: flex;
   flex-direction: column;
+  color: black;
+  /* width: 100; */
+  /* align-items: center; */
+
 
 }
-.nav-add{
-  position: fixed;
-  top: 3em;
-  right:5em
-}
 
-
-.auth-form-container {
+.auth-form-container, .login-form {
   display: flex;
   flex-direction: column;
   background-color: hwb(223 94% 3%);
-  position: absolute;
+   /* position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  /* height: 430px */
+  left: 50%; */
+  /*transform: translate(-50%, -50%); */
+  /* height: 500px */
 
 
   /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
@@ -122,6 +75,5 @@ input {
 .link-btn {
   background: none;
   color: rgb(122, 122, 242);
-  text-decoration: none; 
-}  
-
+  text-decoration: none;
+}
