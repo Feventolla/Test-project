@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import logo from "../assets/react.svg";
+import plan4 from "../assets/plan4.svg";
 import "./register.css";
 import { register } from "../redux/userSlice";
+import { Button, Box } from "rebass";
+import styled from "@emotion/styled";
 
 const Register = () => {
   const [firstname, setFirstname] = useState("");
@@ -14,6 +16,20 @@ const Register = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
+
+  const Button = styled.button`
+    padding: 10px;
+    background-color: #6a6aec;
+    font-size: 20px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    &:hover {
+      color: #040d4c;
+      background-color: white;
+    }
+  `;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,17 +44,16 @@ const Register = () => {
     navigate("/");
   };
   return (
-    <div>
-      <div className="app"></div>
+    <div className="app">
       <div className="app-inside">
         <div className="auth-form-container">
           <img
-            src={logo}
+            src={plan4}
             alt="top-image"
             style={{
               marginLeft: "4em",
-              width: 50,
-              height: 50,
+              width: 100,
+              height: 100,
             }}
           />
           <h2>Register</h2>
@@ -98,7 +113,7 @@ const Register = () => {
               id="height"
               name="height"
             ></input>
-            <button type="submit">Create new user</button>
+            <Button type="submit">Create new user</Button>
           </form>
         </div>
       </div>
