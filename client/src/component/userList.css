@@ -1,15 +1,20 @@
- .header {
-  text-align: center;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+ .main {
+  margin-left: 20em;
+  margin-top: 4em;
+  /* text-align: center; */
+  /* display: flex; */
+  /* min-height: 100vh; */
+  /* align-items: center; */
+  /* justify-content: center; */
   color: black;
   background-color: white;
   
 }
- h2 {
-  margin-left: 3em;
+
+ h3 {
+  font-size:large;
+  font-family: sans-serif;
+  /* margin-left: 3em; */
 }
 .cardAll {
   color: black;

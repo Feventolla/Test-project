@@ -43,7 +43,7 @@
   color: black;
 } */
 
-.app {
+/* .app {
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -78,12 +78,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);  */
   /* height: 430px */
 
 
   /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
-}
+/* }
 
 @media screen and (min-width: 600px) {
   .auth-form-container {
@@ -108,7 +108,7 @@ input {
   border: none;
   border-radius: 10px;
   background-color: rgba(224, 227, 245, 0.659);
-}
+} */
 
 /* button {
   border: none;
@@ -119,9 +119,9 @@ input {
   color: #bfa2f0;
 } */
 
-.link-btn {
+/* .link-btn {
   background: none;
   color: rgb(122, 122, 242);
   text-decoration: none; 
-}  
+}   */
 

@@ -9,12 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@rebass/preset": "^4.0.5",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.1",
+    "emotion-theming": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.5",
+    "rebass": "^4.0.7",
     "redux": "^4.2.0"
   },
   "devDependencies": {
