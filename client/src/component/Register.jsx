@@ -25,6 +25,7 @@ const Register = () => {
       height,
     };
     dispatch(register(userData));
+    navigate("/");
   };
   return (
     <div>

@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import logo from "../assets/react.svg";
 import "./register.css";
-import { register } from "../redux/userSlice";
+import { register, updateuser } from "../redux/userSlice";
 
 const Register = (props) => {
   const [users, setUser] = useState("");
@@ -36,14 +36,9 @@ const Register = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const userData = {
-      firstname,
-      lastname,
-      age,
-      gender,
-      height,
-    };
-    dispatch(register(userData));
+    // const userData = users;
+    dispatch(updateuser(users));
+    navigate("/");
   };
   return (
     <div>

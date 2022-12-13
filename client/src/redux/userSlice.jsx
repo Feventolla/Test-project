@@ -26,8 +26,19 @@ export const getall = createAsyncThunk("user/getall", async () => {
 
 export const updateuser = createAsyncThunk("user/update", async (userData) => {
   const id = localStorage.getItem("id");
+  // console.log("iddd", id);
   try {
-    return await axios.put(`http://localhost:4000/api/users/${id}`);
+    return await axios.put(`http://localhost:4000/api/users/${id}`, userData);
+  } catch (err) {
+    console.log(err.response.data.message);
+  }
+});
+
+export const deleteuser = createAsyncThunk("user/delete", async (id) => {
+  // const id = localStorage.getItem("id");
+  console.log("iddd", id);
+  try {
+    return await axios.delete(`http://localhost:4000/api/users/${id}`);
   } catch (err) {
     console.log(err.response.data.message);
   }
@@ -46,7 +57,7 @@ const userSlice = createSlice({
     [getall.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.user = action.payload;
-      console.log("actionn", action);
+      // console.log("actionn", action);
     },
     [getall.rejected]: (state, action) => {
       state.isLoading = false;
@@ -67,23 +78,24 @@ const userSlice = createSlice({
       state.isLoading = true;
     },
     [updateuser.fulfilled]: (state, action) => {
-      // const found = state.user.find((data) => data._id === action.payload._id);
-      // state.items = state.items.map((item) => {
-      //   if (found) {
-      //     Object.assign(found, action.payload);
-
-      //     return {
-      //       ...item,
-      //     };
-      //   }
-
-      //   return item;
-      // });
-      // state.isSuccess = true;
       state.isLoading = false;
       state.user = action.payload;
+      console.log("update action", action);
     },
     [updateuser.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.errorMessage = action.payload;
+      state.user = null;
+    },
+    [deleteuser.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [deleteuser.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.user = state.user.filter((user) => user.id !== action.payload.id);
+      console.log("delete action", action);
+    },
+    [deleteuser.rejected]: (state, action) => {
       state.isLoading = false;
       state.errorMessage = action.payload;
       state.user = null;
