@@ -92,7 +92,9 @@ const userSlice = createSlice({
     },
     [deleteuser.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.user = state.user.filter((user) => user.id !== action.payload.id);
+      state.user = state.user.filter(
+        (user) => user._id !== action.payload.data.id
+      );
       console.log("delete action", action);
     },
     [deleteuser.rejected]: (state, action) => {

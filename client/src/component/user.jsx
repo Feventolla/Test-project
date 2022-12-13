@@ -15,35 +15,41 @@ const userList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <div>
-      <div className="appp">
-        <div className="app-inside">
-          <h2>USER LIST</h2>
-          <button onClick={() => navigate("/register")}>Add user</button>
-          <div>
-            {user?.map((users, index) => (
-              <h3 key={index}>
-                <div>{users.firstname}</div>
-                <button
-                  className="btn"
-                  onClick={() =>
-                    navigate("/updateuser/" + users._id, {
-                      state: { id: users._id },
-                    })
-                  }
-                >
-                  update
-                </button>{" "}
-                <button
-                  className="btn"
-                  text="delete"
-                  onClick={() => dispatch(deleteuser(users._id))}
-                >
-                  Delete
-                </button>{" "}
-              </h3>
-            ))}
-          </div>
+    <div className="app">
+      <div className="app-inside">
+        <h2>USER LIST</h2>
+        <button onClick={() => navigate("/register")}>Add user</button>
+        <div>
+          {user.length > 0 ? (
+            <div>
+              {user.map((users, index) => (
+                <div key={index}>
+                  <h3>
+                    {users.firstname}
+                    <button
+                      className="btn"
+                      onClick={() =>
+                        navigate("/updateuser/" + users._id, {
+                          state: { id: users._id },
+                        })
+                      }
+                    >
+                      update
+                    </button>{" "}
+                    <button
+                      className="btn"
+                      text="delete"
+                      onClick={() => dispatch(deleteuser(users._id))}
+                    >
+                      Delete
+                    </button>{" "}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <h2>no task available</h2>
+          )}
         </div>
       </div>
     </div>
