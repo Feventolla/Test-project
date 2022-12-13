@@ -1,0 +1,13 @@
+GET  http://localhost:4000/api/users
+
+###
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+  "firstname": "nilu",
+  "lastname": "denzar",
+  "age": "23",
+  "gender": "female",
+  "height": "1.5",
+}
