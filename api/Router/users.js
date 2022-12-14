@@ -76,7 +76,11 @@ router.delete("/api/users/:id", getuser, async (req, res) => {
 });
 
 router.get("/api/users/:id", getuser, (req, res) => {
-  res.json(res.user);
+  try {
+    return res.json(res.user);
+  } catch (err) {
+    console.log(err.message);
+  }
 });
 
 //middleware

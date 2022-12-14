@@ -87,16 +87,18 @@ const userList = () => {
                   <Box
                     p={5}
                     fontSize={3}
-                    width={[1, 1, 0.76]}
+                    // width={[1, 1, 0.76]}
                     color="black"
                     bg="#EBECF3"
-                    m={4}
+                    m={3}
                     sx={{
                       border: "1px solid black",
                       borderRadius: "20px",
+                      width: 750,
+                      height: 250,
                     }}
                   >
-                    <img src={plan3} alt="image" width={120} height={120} />
+                    <img src={plan3} alt="image" width={50} height={50} />
                     <h3>
                       Name: {users.firstname} {users.lastname}
                       <div>
