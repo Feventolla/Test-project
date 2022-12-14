@@ -3,8 +3,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import apicalls from "./apicall";
 
-const user = localStorage.getItem("user");
-// console.log("user", user);
+// const user = localStorage.getItem("user");
 export const register = createAsyncThunk("user", async (userData) => {
   try {
     return await axios.post("http://localhost:4000/api/users", userData);

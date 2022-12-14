@@ -60,7 +60,6 @@ const userList = () => {
     dispatch(getall());
   }, [getall]);
   const { user } = useSelector((state) => state.user);
-  // console.log("users....", user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
@@ -126,7 +125,7 @@ const userList = () => {
               ))}
             </div>
           ) : (
-            <h2>no task available</h2>
+            <h2>No User available</h2>
           )}
         </div>
       </div>
