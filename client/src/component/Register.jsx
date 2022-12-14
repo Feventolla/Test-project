@@ -33,6 +33,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const userData = {
       firstname,
       lastname,
@@ -58,40 +59,40 @@ const Register = () => {
           />
           <h2>Register</h2>
           <form className="login-form" onSubmit={handleSubmit}>
-            <label htmlFor="firstname">firstname : </label>
+            <label htmlFor="firstname">Firstname : </label>
             <input
               value={firstname}
               onChange={(e) => setFirstname(e.target.value)}
               type="firstname"
               required={true}
               minLength={3}
-              placeholder="ABC"
+              placeholder="firstname"
               id="firstname"
               name="firstname"
             ></input>
-            <label htmlFor="lastname">lastname : </label>
+            <label htmlFor="lastname">Lastname : </label>
             <input
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
               type="lastname"
               required={true}
-              placeholder="abc@gmail.com"
+              placeholder="lastname"
               id="lastname"
               name="lastname"
             ></input>
 
-            <label htmlFor="age">age : </label>
+            <label htmlFor="age">Age : </label>
             <input
               value={age}
               onChange={(e) => setAge(e.target.value)}
               // ref={passhash}
-              type="age"
+              type="number"
               required={true}
               placeholder="age"
               id="age"
               name="age"
             ></input>
-            <label htmlFor="gender">gender : </label>
+            <label htmlFor="gender">Gender : </label>
             <input
               value={gender}
               onChange={(e) => setGender(e.target.value)}
@@ -102,12 +103,12 @@ const Register = () => {
               id="gender"
               name="gender"
             ></input>
-            <label htmlFor="height">height : </label>
+            <label htmlFor="height">Height : </label>
             <input
               value={height}
               onChange={(e) => setHeight(e.target.value)}
               // ref={passhash}
-              type="height"
+              type="number"
               required={true}
               placeholder="height"
               id="height"

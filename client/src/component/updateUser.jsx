@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import logo from "../assets/react.svg";
+import plan1 from "../assets/plan1.svg";
 import "./register.css";
 import { register, updateuser } from "../redux/userSlice";
+import styled from "@emotion/styled";
 
 const Register = (props) => {
   const [users, setUser] = useState("");
@@ -17,7 +18,19 @@ const Register = (props) => {
   const location = useLocation();
   const { user } = useSelector((state) => state.user);
 
-  // console.log("first", location.state.id);
+  const Button = styled.button`
+    padding: 10px;
+    background-color: #6a6aec;
+    font-size: 20px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    &:hover {
+      color: #040d4c;
+      background-color: white;
+    }
+  `;
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -41,22 +54,21 @@ const Register = (props) => {
     navigate("/");
   };
   return (
-    <div>
-      <div className="app"></div>
+    <div className="app">
       <div className="app-inside">
         <div className="auth-form-container">
           <img
-            src={logo}
+            src={plan1}
             alt="top-image"
             style={{
-              marginLeft: "4em",
-              width: 50,
-              height: 50,
+              marginLeft: "2em",
+              width: 100,
+              height: 100,
             }}
           />
-          <h2>Register</h2>
+          <h2>UPDATE</h2>
           <form className="login-form" onSubmit={handleSubmit}>
-            <label htmlFor="firstname">firstname : </label>
+            <label htmlFor="firstname">Firstname : </label>
             <input
               value={users.firstname}
               onChange={(e) => setUser({ ...users, firstname: e.target.value })}
@@ -67,7 +79,7 @@ const Register = (props) => {
               id="firstname"
               name="firstname"
             ></input>
-            <label htmlFor="lastname">lastname : </label>
+            <label htmlFor="lastname">Lastname : </label>
             <input
               value={users.lastname}
               onChange={(e) => setUser({ ...users, lastname: e.target.value })}
@@ -78,18 +90,18 @@ const Register = (props) => {
               name="lastname"
             ></input>
 
-            <label htmlFor="age">age : </label>
+            <label htmlFor="age">Age : </label>
             <input
               value={users.age}
               onChange={(e) => setUser({ ...users, age: e.target.value })}
               // ref={passhash}
-              type="age"
+              type="number"
               required={true}
               placeholder="age"
               id="age"
               name="age"
             ></input>
-            <label htmlFor="gender">gender : </label>
+            <label htmlFor="gender">Gender : </label>
             <input
               value={users.gender}
               onChange={(e) => setUser({ ...users, gender: e.target.value })}
@@ -100,18 +112,18 @@ const Register = (props) => {
               id="gender"
               name="gender"
             ></input>
-            <label htmlFor="height">height : </label>
+            <label htmlFor="height">Height : </label>
             <input
               value={users.height}
               onChange={(e) => setUser({ ...users, height: e.target.value })}
               // ref={passhash}
-              type="height"
+              type="number"
               required={true}
               placeholder="height"
               id="height"
               name="height"
             ></input>
-            <button type="submit">update user</button>
+            <Button type="submit">Update user</Button>
           </form>
         </div>
       </div>

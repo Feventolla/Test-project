@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   color: white; 
+  font-family: Arial;
 
   /* background-color: black; */
   /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
@@ -13,34 +14,30 @@
   /* filter: blur(1px); */
 }
 h2 {
-  margin-left: 3em;
+  margin-left: 1em;
 }
-.app-inside , .login-form{
-  width: 500;
+.app-inside,.login-form {
   display: flex;
   flex-direction: column;
   color: black;
-  /* width: 100; */
-  /* align-items: center; */
+  
 
 
+  /* margin-left: 25em;
+  margin-right: 25em; */
 }
 
-.auth-form-container, .login-form {
-  width: 500;
+.auth-form-container {
+  /* width: 200; */
   display: flex;
   flex-direction: column;
   background-color: rgb(240, 246, 253);
    
-  /* height: 500px */
-
-
-  /* background-image: linear-gradient(60deg, #f2f2f5, #a8bbf9 48%, #ecedf4); */
 }
 
 @media screen and (min-width: 600px) {
   .auth-form-container {
-    padding: 5rem;
+    padding: 1rem 8rem 1rem 8rem;
     border: 0.1px dashed rgb(247, 242, 242);
     border-radius: 10px;
     border-bottom-left-radius: 50px;
